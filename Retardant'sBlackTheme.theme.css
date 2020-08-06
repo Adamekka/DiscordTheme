@@ -8,7 +8,7 @@
  * @donate https://paypal.me/retardant
  * @patreon
  * @changeLog 
- * @version 1.0
+ * @version 1.1
  * @description Made with love by Re_tardant.
  */
 
@@ -16,7 +16,7 @@
 /* IMPORT CSS */
 @import url(https://clearvision.gitlab.io/v6/main.css);@import url("https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css");   /* An horizontal server list made by Gibbu */
 @import url("https://gibbu.github.io/BetterDiscord-Themes/RadialStatus/base.css");  /* Radial Status */
-@import url("https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Hide/Members/Yes.css");   /* Hide user panel */ 
+/*@import url("https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Hide/Members/Yes.css");   /* Hide user panel */ 
 
 /* SETTINGS */
 
@@ -25,10 +25,10 @@
 :root {
 
 	/* ACCENT COLORS */
-	--main-color: #c200bf; /* main accent color (hex, rgb or hsl) [default: #2780e6] */
-	--hover-color: #00ffe5; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
-	--success-color: #00ffe5; /* success accent color (hex, rgb or hsl) [default: #43b581] */
-	--danger-color: #00ffe5; /* danger accent color (hex, rgb or hsl) [default: #982929] */
+	--main-color: rgb(255, 0, 0); /* main accent color (hex, rgb or hsl) [default: #2780e6] */
+	--hover-color: #ffffff80; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+	--success-color: #ffffff; /* success accent color (hex, rgb or hsl) [default: #43b581] */
+	--danger-color: #ffffff; /* danger accent color (hex, rgb or hsl) [default: #982929] */
 
 	/* STATUS COLORS */
 	--online-color: #43b581; /* online status color (hex, rgb or hsl) [default: #43b581] */
@@ -66,7 +66,7 @@
 	--home-size: 50px; /* home button icon size [default: 50px] */
 	
 	/* MODAL BACKDROP */
-	--backdrop-overlay: rgb(0, 0, 0); /* modal backdrop overlay color/gradient [default: rgb(0, 0, 0] */
+	--backdrop-overlay: rgb(0, 0, 0);/* modal backdrop overlay color/gradient [default: rgb(0, 0, 0] */
 	--backdrop-position: var(--background-position); /* modal backdrop position [default: var(---background-position)] */
 	--backdrop-size: var(--background-size); /* modal backdrop size [default: var(---background-size)] */
 	--backdrop-repeat: var(--background-repeat); /* modal backdrop repeat [default: var(---background-repeat)] */
@@ -80,6 +80,7 @@
 	--backdrop-blur: var(--background-blur); /* modal backdrop blur [default: var(--background-blur)] */
 	
 	/* USER POPOUT BACKGROUND */
+	--backdrop-overlay: rgb(0, 0, 0);
 	--user-popout-position: var(--background-position); /* user popout background position [default: var(---background-position)] */
 	--user-popout-size: var(--background-size); /* user popout background size [default: var(---background-size)] */
 	--user-popout-repeat: var(--background-repeat); /* user popout background repeat [default: var(---background-repeat)] */
@@ -93,6 +94,7 @@
 	--user-popout-blur: calc(var(--background-blur) + px); /* user popout background blur [default: calc(var(--background-blur) + 3px)] */
 	
 	/* USER MODAL BACKGROUND */
+	--backdrop-overlay: rgb(17, 17, 17);
 	--user-modal-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(---background-image)] */
 	--user-modal-position: var(--background-position); /* user modal background position [default: var(---background-position)] */
 	--user-modal-size: var(--background-size); /* user modal background size [default: var(---background-size)] */
@@ -104,7 +106,7 @@
 	--user-modal-invert: var(--background-invert); /* user modal background invert (0 - 100%) [default: var(---background-invert)] */
 	--user-modal-grayscale: var(--background-grayscale); /* user modal background grayscale (0 - 100%) [default: var(---background-grayscale)] */
 	--user-modal-sepia: var(--background-sepia); /* user modal background sepia (0 - 100%) [default: var(---background-sepia)] */
-	--user-modal-blur: calc(var(--background-blur) + 3px); /* user modal background blur [default: calc(var(--background-blur) + 3px)] */
+	--user-modal-blur: calc(var(--background-blur) + px); /* user modal background blur [default: calc(var(--background-blur) + 3px)] */
 	
 	/* THEME BD COLORS */
 	--bd-blue: var(--main-color); /* betterdiscord main color [default: var(--main-color)] */
@@ -125,13 +127,13 @@
   --show-gift-gif-buttons: none; /* show gift gif buttons */
   
   	/*  GRADIENT  */
-  --gradient-primary: 0, 255, 229;
-  --gradient-secondary: 194, 0, 191;
-  --gradient-direction: 215deg;
+  --gradient-primary: 255, 255, 255; /*0, 255, 229*/
+  --gradient-secondary: 255, 0, 0; /*194, 0, 191*/
+  --gradient-direction: 215deg; /*215deg*/
   
-  --gradient-primary2: 194, 0, 191;
-  --gradient-secondary2: 0, 255, 229;
-  --gradient-direction2: 215deg;
+  --gradient-primary2: 255, 0, 0; /*194, 0, 191*/
+  --gradient-secondary2: 255, 255, 255; /*0, 255, 229*/
+  --gradient-direction2: 215deg; /*215deg*/
   
   --gradient: linear-gradient(var(--gradient-direction), rgb(var(--gradient-primary)), rgb(var(--gradient-secondary)));
   --gradient2: linear-gradient(var(--gradient-direction2), rgb(var(--gradient-primary2)), rgb(var(--gradient-secondary2)));
@@ -145,11 +147,13 @@
   display: var(--show-gift-gif-buttons);
 }
 
-.typeWindows-1za-n7 > .wordmark-2iDDfm:after, .container-3baos1:before, .container-3baos1:after {display: none;}
-.typeWindows-1za-n7 > .wordmark-2iDDfm:before {content: "Re_tardant's Black Theme v1.0";}
+.typeWindows-1za-n7 > .wordmark-2iDDfm:after{content:"v1.1"} 
+.container-3baos1:before {content:"Re_tardant's Black Theme"}
+.container-3baos1:after {content:"v1.1"}
+.typeWindows-1za-n7 > .wordmark-2iDDfm:before {content: "Re_tardant's Black Theme"}
 
 
-*google translate pluggin*/
+/*google translate pluggin*/
 .theme-dark .themedPopout-1TrfdI {background-color: var(--background-overlay) !important;}
   
 
@@ -175,8 +179,8 @@
 }
 
 .channelTextArea-rNsIhG .scrollableContainer-2NUZem:focus-within {
-    border: 2px solid #00ffe5;
-    border-image: linear-gradient(90deg, #c200bf, #00ffe5 ) 1;
+    border: 2px solid #ffffff;
+    border-image: linear-gradient(120deg, #ff0000, #ffffff ) 1;
     border-radius: 5px;
 }
 
@@ -184,7 +188,7 @@
 /* Unread Channels */
 .wrapper-1ucjTd.modeUnread-1zpFdA .content-3at_AU .icon-1_QxNX,
 .wrapper-1ucjTd.modeUnread-1zpFdA .content-3at_AU .name-3_Dsmg {
-  background: -webkit-linear-gradient(110deg, #c200bf, #00ffe5);
+  background: -webkit-linear-gradient(110deg, #c20000, #ffffff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
