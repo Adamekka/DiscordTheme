@@ -8,7 +8,7 @@
  * @donate https://paypal.me/retardant
  * @patreon
  * @changeLog 
- * @version 1.2
+ * @version 1.3
  * @description Made with love by Re_tardant.
  */
 
@@ -157,9 +157,9 @@
   display: var(--show-gift-gif-buttons);
 }
 
-.typeWindows-1za-n7 > .wordmark-2iDDfm:after{content:"v1.2"} 
+.typeWindows-1za-n7 > .wordmark-2iDDfm:after{content:"v1.3"} 
 .container-3baos1:before {content:"Re_tardant's Black Theme"}
-.container-3baos1:after {content:"v1.2"}
+.container-3baos1:after {content:"v1.3"}
 .typeWindows-1za-n7 > .wordmark-2iDDfm:before {content: "Re_tardant's Black Theme"}
 
 
@@ -187,13 +187,6 @@
 .item-2hkk8m {
 	background: #ffffff
 }
-
-.channelTextArea-rNsIhG .scrollableContainer-2NUZem:focus-within {
-    border: 2px solid #ffffff;
-    border-image: linear-gradient(120deg, #ff0000, #ffffff ) 1;
-    border-radius: 5px;
-}
-
 
 /* Unread Channels */
 .wrapper-1ucjTd.modeUnread-1zpFdA .content-3at_AU .icon-1_QxNX,
